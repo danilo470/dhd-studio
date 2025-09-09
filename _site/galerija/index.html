@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerija</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+</head>
+<body class="bg-blk text-dark relative hero__layer">
+  
+  <main>
+                                                            <!-- Custom Style -->
+      <style>
+      [data-tab].active.tab-active\:text-emerald-800 {
+            color: rgb(6 95 70);
+        }
+        [data-tab].active.tab-active\:bg-emerald-50 {
+            background-color: rgb(236 253 245);
+        }
+        [data-tab].active.tab-active\:rounded-full {
+            border-radius: 9999px;
+        }        
+        .tabs-buttons .swiper-slide{
+            width: fit-content;       
+            cursor: pointer;    
+        }
+        
+    #gallery {
+    
+}
+@media screen and (min-width: 991px) {
+.gallery {
+padding: 60px 30px 0 30px;
+}
+}
+
+.img-wrapper {
+position: relative;
+
+}
+.img-wrapper img {
+width: 100%;
+}
+
+.img-overlay {
+background: rgba(0,0,0,0.5);
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+cursor: pointer;
+}
+
+
+#overlay {
+background: rgba(0,0,0,0.5);
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 999;
+-webkit-user-select: none;
+-moz-user-select: none;    
+-ms-user-select: none; 
+user-select: none; 
+}
+.overlay img {
+margin: 0;
+width: 80%;
+height: auto;
+object-fit: contain;
+padding: 5%;
+}
+@media screen and (min-width:768px) {
+  .overlay img {
+    width: 60%;
+  }
+}
+@media screen and (min-width:1200px) {
+  .overlay img {
+    width: 50%;
+  }
+}
+
+
+#nextButton {
+color: #fff;
+font-size: 2em;
+transition: opacity 0.8s;
+}
+#nextButton:hover {
+opacity: 0.7;
+}
+@media screen and (min-width:768px) {
+#nextButton {
+font-size: 3em;
+}
+}
+
+#prevButton {
+color: #fff;
+font-size: 2em;
+transition: opacity 0.8s;
+}
+#prevButton :hover {
+opacity: 0.7;
+}
+@media screen and (min-width:768px) {
+#prevButton {
+font-size: 3em;
+}
+}
+.close{
+    opacity: 0;
+}
+#exitButton {
+color: #fff;
+font-size: 2em;
+transition: opacity 0.8s;
+position: absolute;
+top: 15px;
+right: 15px;
+}
+#exitButton :hover {
+opacity: 0.7;
+}
+@media screen and (min-width:768px) {
+#exitButton {
+font-size: 3em;
+}
+}
+    </style>
+<section class="py-24">
+  <div class="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto relative z-10">
+      <div class="flex md:flex-row flex-col items-center justify-between gap-2.5">
+          <h2 class="w-full text-gray-900 text-4xl font-bold font-manrope leading-normal md:text-start text-center">
+              Gallery Chronicles</h2>
+          <p class="w-full md:text-right text-center text-gray-600 text-lg font-normal leading-8">Traversing the
+              Rich Tapestry of Our Collections</p>
+      </div>
+      <div class="tabs" id="gallery">
+        <div class="lg:my-16 my-10" id="">
+            <div id="tabs-with-underline-1" role="tabpanel" aria-labelledby="tabs-with-underline-item-1"
+                class="tabcontent ">
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041668.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041668.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2016</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041679.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041679.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image ">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041689.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041689.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4 lg:my-8 my-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041723.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041723.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041734.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041734.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041744.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041744.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041779.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041779.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041789.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041789.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041801.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041801.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-with-underline-2" class="hidden tabcontent" role="tabpanel"
+                aria-labelledby="tabs-with-underline-item-2">
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041668.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041668.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2016</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041679.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041679.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image ">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041689.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041689.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4 lg:my-8 my-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041723.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041723.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041734.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041734.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041744.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041744.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041779.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041779.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041789.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041789.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041801.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041801.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-with-underline-3" class="hidden tabcontent" role="tabpanel"
+                aria-labelledby="tabs-with-underline-item-3">
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041668.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041668.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2016</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041679.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041679.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image ">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041689.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041689.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4 lg:my-8 my-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041723.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041723.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041734.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041734.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041744.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041744.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041779.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041779.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041789.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041789.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041801.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041801.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-with-underline-4" class="hidden tabcontent" role="tabpanel"
+                aria-labelledby="tabs-with-underline-item-4">
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041668.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041668.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2016</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041679.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041679.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2017</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image ">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041689.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041689.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4 lg:my-8 my-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041723.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041723.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041734.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041734.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041744.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041744.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex md:flex-row flex-col lg:gap-8 gap-4">
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041779.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041779.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2022</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041789.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041789.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-full group overflow-hidden rounded-2xl image">
+                        <div class="img-wrapper rounded-2xl ">
+                            <a href="https://pagedone.io/asset/uploads/1714041801.png"><img alt="Gallery image"
+                                    src="https://pagedone.io/asset/uploads/1714041801.png"
+                                    class="img-responsive w-96 h-60 group-hover:scale-110 transition-all duration-700 ease-in-out object-cover rounded-2xl"></a>
+                            <div class="img-overlay rounded-2xl">
+                                <div
+                                    class="absolute bottom-0 left-0 p-5 w-full h-full group-hover:w-full group-hover:h-full group-hover:rounded-2xl group-hover:bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                                    <span class="text-white text-lg font-medium leading-8">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <ul class="flex gap-2.5 py-2.5 px-3 bg-white rounded-full border border-gray-200 w-fit mx-auto">
+                <li>
+                    <a href="javascript:void(0)"
+                        class="inline-block active tablink tab-active:bg-emerald-50 tab-active:text-emerald-800 tab-active:rounded-full px-3 py-1.5 text-gray-900 text-xs font-medium leading-4"
+                        data-tab="tabs-with-underline-1" role="tab">
+                        Year
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"
+                        class="inline-block tablink tab-active:bg-emerald-50 tab-active:text-emerald-800 tab-active:rounded-full px-3 py-1.5 text-gray-900 text-xs font-medium leading-4"
+                        data-tab="tabs-with-underline-2" role="tab">
+                        Months
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"
+                        class="inline-block tablink tab-active:bg-emerald-50 tab-active:text-emerald-800 tab-active:rounded-full px-3 py-1.5 text-gray-900 text-xs font-medium leading-4"
+                        data-tab="tabs-with-underline-3" role="tab">
+                        Days
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)"
+                        class="inline-block tablink tab-active:bg-emerald-50 tab-active:text-emerald-800 tab-active:rounded-full px-3 py-1.5 text-gray-900 text-xs font-medium leading-4"
+                        data-tab="tabs-with-underline-4" role="tab">
+                        All Photos
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <div class="lightbox" id="lightbox">
+          <span class="close" id="close">&times;</span>
+          <img src="" alt="" class="lightbox-image" id="lightbox-image">
+      </div>
+  </div>
+</section>
+<!-- Initialize Swiper -->
+<script>
+
+// Gallery image hover
+$( ".img-wrapper" ).hover(
+function() {
+  $(this).find(".img-overlay").animate({opacity: 1}, 600);
+}, function() {
+  $(this).find(".img-overlay").animate({opacity: 0}, 600);
+}
+);
+
+// Lightbox
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+var $prevButton = $('<div id="prevButton"><i class="fa fa-chevron-left"></i></div>');
+var $nextButton = $('<div id="nextButton"><i class="fa fa-chevron-right"></i></div>');
+var $exitButton = $('<div id="exitButton"><i class="fa fa-times"></i></div>');
+
+// Add overlay
+$overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
+$("#gallery").append($overlay);
+
+// Hide overlay on default
+$overlay.hide();
+
+// When an image is clicked
+$(".img-overlay").click(function(event) {
+// Prevents default behavior
+event.preventDefault();
+// Adds href attribute to variable
+var imageLocation = $(this).prev().attr("href");
+// Add the image src to $image
+$image.attr("src", imageLocation);
+// Fade in the overlay
+$overlay.fadeIn("fast");
+});
+
+// When the overlay is clicked
+$overlay.click(function() {
+// Fade out the overlay
+$(this).fadeOut("fast");
+});
+
+// When next button is clicked
+$nextButton.click(function(event) {
+// Hide the current image
+$("#overlay img").hide();
+// Overlay image location
+var $currentImgSrc = $("#overlay img").attr("src");
+// Image with matching location of the overlay image
+var $currentImg = $('#gallery img[src="' + $currentImgSrc + '"]');
+// Finds the next image
+var $currentImgIndex = $('#gallery img').index($currentImg);
+var $images = $('#gallery img');
+var $nextImg;
+
+if ($currentImgIndex + 1 < $images.length) {
+  $nextImg = $($images[$currentImgIndex + 1]);
+} else {
+  $nextImg = $($images[0]);
+}
+
+// All of the images in the gallery
+var $images = $("#gallery img");
+// If there is a next image
+if ($nextImg.length > 0) { 
+  // Fade in the next image
+  $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(400);
+} else {
+  // Otherwise fade in the first image
+  $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(400);
+}
+// Prevents overlay from being hidden
+event.stopPropagation();
+});
+
+// When previous button is clicked
+$prevButton.click(function(event) {
+// Hide the current image
+$("#overlay img").hide();
+// Overlay image location
+var $currentImgSrc = $("#overlay img").attr("src");
+// Image with matching location of the overlay image
+var $currentImg = $('#gallery img[src="' + $currentImgSrc + '"]');
+// Finds the next image
+var $nextImg = $($currentImg.closest(".image").prev().find("img"));
+// Fade in the next image
+$("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(400);
+// Prevents overlay from being hidden
+event.stopPropagation();
+});
+
+// When the exit button is clicked
+$exitButton.click(function() {
+// Fade out the overlay
+$("#overlay").fadeOut("fast");
+});
+
+// Tab functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const tablinks = document.querySelectorAll('.tablink');
+    const tabcontents = document.querySelectorAll('.tabcontent');
+    
+    tablinks.forEach(function(tablink) {
+        tablink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all tabs
+            tablinks.forEach(t => t.classList.remove('active'));
+            tabcontents.forEach(t => {
+                t.classList.add('hidden');
+                t.classList.remove('block');
+            });
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Show corresponding content
+            const targetTab = this.getAttribute('data-tab');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+                targetContent.classList.add('block');
+            }
+        });
+    });
+});
+
+</script>
+                                                    
+
+
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script defer src="/script.js"></script>
+</body>
+</html>

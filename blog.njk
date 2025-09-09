@@ -1,0 +1,11 @@
+---
+layout: 'layouts/base.njk'
+title: 'Blog Page'
+---
+<section class="py-20 md:py-25 lg:py-50 px-4 sm:px-6 max-w-[75rem] mx-auto">
+  <div class="grid grid-cols-1  md:grid-cols-3 gap-12 md:gap-5 lg:gap-6">
+    {%- for post in collections.post | reverse -%}
+      {% include 'partials/articles-snippet.njk' %}
+    {%- endfor -%}
+  </div>
+</section>

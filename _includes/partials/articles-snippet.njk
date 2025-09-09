@@ -1,0 +1,17 @@
+    <a href="{{ post.url }}" class="flex flex-col gap-8 hover:gap-7 transition-all duration-300 group">
+      <div class="relative">
+        <picture>
+          <!-- Mobile Image -->
+          <img aria-hidden="true" loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="1920" height="1280">
+        </picture>
+        <span class="work-gradient absolute inset-0 opacity-0 group-hover:opacity-60 transition duration-300"></span>
+      </div>
+      <div>
+        <div class="flex gap-4 items-center mb-4 lg:mb-6">
+          <p>{{ post.data.kind }}</p> 
+          <span class="bg-hvr w-7.5 h-0.25 inline-block"></span>
+          <p>{{ post.date | postDate }}</p>
+        </div>
+        <h3 class="text-h3-sm sm:text-h3-lg md:text-h3-sm lg:text-h3-lg mb-4 md:-scroll-mb-10">{{ post.data.title }}</h3>
+      </div>
+    </a> <!-- Box -->

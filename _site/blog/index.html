@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+</head>
+<body class="bg-blk text-dark relative hero__layer">
+  
+  <main>
+    <section class="py-20 md:py-25 lg:py-50 px-4 sm:px-6 max-w-[75rem] mx-auto">
+  <div class="grid grid-cols-1  md:grid-cols-3 gap-12 md:gap-5 lg:gap-6">    <a href="/blog/2025-05-16-second-blog/" class="flex flex-col gap-8 hover:gap-7 transition-all duration-300 group">
+      <div class="relative">
+        <picture>
+          <!-- Mobile Image -->
+          <img aria-hidden="true" loading="lazy" decoding="async" src="/photo-images/alb-d.webp" alt="vintage camera" width="1920" height="1280">
+        </picture>
+        <span class="work-gradient absolute inset-0 opacity-0 group-hover:opacity-60 transition duration-300"></span>
+      </div>
+      <div>
+        <div class="flex gap-4 items-center mb-4 lg:mb-6">
+          <p>Resources</p> 
+          <span class="bg-hvr w-7.5 h-0.25 inline-block"></span>
+          <p>May 16, 2025</p>
+        </div>
+        <h3 class="text-h3-sm sm:text-h3-lg md:text-h3-sm lg:text-h3-lg mb-4 md:-scroll-mb-10">Second Blog</h3>
+      </div>
+    </a> <!-- Box -->    <a href="/blog/sadvfzsac/" class="flex flex-col gap-8 hover:gap-7 transition-all duration-300 group">
+      <div class="relative">
+        <picture>
+          <!-- Mobile Image -->
+          <img aria-hidden="true" loading="lazy" decoding="async" src="/photo-images/blog3-m.webp" alt="asdfvg" width="1920" height="1280">
+        </picture>
+        <span class="work-gradient absolute inset-0 opacity-0 group-hover:opacity-60 transition duration-300"></span>
+      </div>
+      <div>
+        <div class="flex gap-4 items-center mb-4 lg:mb-6">
+          <p>Something</p> 
+          <span class="bg-hvr w-7.5 h-0.25 inline-block"></span>
+          <p>May 13, 2025</p>
+        </div>
+        <h3 class="text-h3-sm sm:text-h3-lg md:text-h3-sm lg:text-h3-lg mb-4 md:-scroll-mb-10">sadvfzsac</h3>
+      </div>
+    </a> <!-- Box -->    <a href="/blog/post1/" class="flex flex-col gap-8 hover:gap-7 transition-all duration-300 group">
+      <div class="relative">
+        <picture>
+          <!-- Mobile Image -->
+          <img aria-hidden="true" loading="lazy" decoding="async" src="/photo-images/blog2-m.webp" alt="asdfvg" width="1920" height="1280">
+        </picture>
+        <span class="work-gradient absolute inset-0 opacity-0 group-hover:opacity-60 transition duration-300"></span>
+      </div>
+      <div>
+        <div class="flex gap-4 items-center mb-4 lg:mb-6">
+          <p>News</p> 
+          <span class="bg-hvr w-7.5 h-0.25 inline-block"></span>
+          <p>May 13, 2025</p>
+        </div>
+        <h3 class="text-h3-sm sm:text-h3-lg md:text-h3-sm lg:text-h3-lg mb-4 md:-scroll-mb-10">First article</h3>
+      </div>
+    </a> <!-- Box --></div>
+</section>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script defer src="/script.js"></script>
+</body>
+</html>
