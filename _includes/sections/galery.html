@@ -1,0 +1,565 @@
+ <style>
+    /* small helper for visually-hidden (used for live region) */
+    .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
+<!-- Gallery Section with Tabs and Modal Video Player -->
+<div class="container w-full mx-auto px-4 max-w-7xl py-12 bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <h1 class="text-4xl font-bold text-center mb-8">Image Gallery</h1>
+
+  <!-- Tab Navigation -->
+  <nav class="tab-navigation flex justify-center mb-8 gap-2 flex-wrap" role="tablist" aria-label="Image categories">
+    <button class="tab-btn px-6 py-3 border border-gray-300 bg-white text-gray-900 text-base font-medium rounded-md transition duration-200 cursor-pointer"
+            data-category="nature" role="tab" aria-controls="nature-grid" aria-selected="false" id="nature-tab">Nature</button>
+
+    <button class="tab-btn px-6 py-3 border border-gray-300 bg-white text-gray-900 text-base font-medium rounded-md transition duration-200 cursor-pointer"
+            data-category="architecture" role="tab" aria-controls="architecture-grid" aria-selected="false" id="architecture-tab">Architecture</button>
+
+    <button class="tab-btn px-6 py-3 border border-gray-300 bg-white text-gray-900 text-base font-medium rounded-md transition duration-200 cursor-pointer"
+            data-category="sports" role="tab" aria-controls="sports-grid" aria-selected="false" id="sports-tab">Sports</button>
+
+    <button class="tab-btn px-6 py-3 border border-gray-300 bg-white text-gray-900 text-base font-medium rounded-md transition duration-200 cursor-pointer"
+            data-category="technology" role="tab" aria-controls="technology-grid" aria-selected="false" id="technology-tab">Technology</button>
+  </nav>
+
+  <!-- Content Area -->
+  <div class="content-area mb-8 min-h-[380px]">
+    <!-- NOTE: We use opacity + pointer-events for transitions rather than `hidden` to allow CSS transitions -->
+     
+    <!-- Nature Images (default active) -->
+    <div class="image-grid grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 transform transition duration-300 ease-linear opacity-0 pointer-events-none" id="nature-grid" role="tabpanel" aria-labelledby="nature-tab">
+      <!-- card1 -->
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <!-- card2 -->
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <!-- card3 -->
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <!-- card4 -->
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <!-- card5 -->
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <!-- card6 -->
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Architecture Images -->
+    <div class="image-grid grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 transform transition duration-300 ease-linear opacity-0 pointer-events-none"
+         id="architecture-grid" role="tabpanel" aria-labelledby="architecture-tab" hidden>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sports Images -->
+    <div class="image-grid grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 transform transition duration-300 ease-linear opacity-0 pointer-events-none"
+         id="sports-grid" role="tabpanel" aria-labelledby="sports-tab" hidden>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technology Images -->
+    <div class="image-grid grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 transform transition duration-300 ease-linear opacity-0 pointer-events-none"
+         id="technology-grid" role="tabpanel" aria-labelledby="technology-tab" hidden>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+      <div class="video-thumb cursor-pointer shadow rounded-lg overflow-hidden bg-white hover:shadow-lg hover:scale-[1.01] transition-all duration-300 ease-in-out aspect-video relative" tabindex="0" data-videoid="828445634" data-thumb="https://i.vimeocdn.com/video/810965406.webp?mw=1600&mh=900&q=70" aria-label="Play video: Preparation">
+        <img src="/dhd-images/mckesson.jpg" alt="Video thumbnail" class="size-full object-cover">
+        <!-- Play Button -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+            <svg class="ml-1 h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Content Overlay -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+          <h3 class="mb-1 text-lg font-bold line-clamp-2">The Future of Healthcare</h3>
+          <div class="flex items-center justify-between text-sm opacity-90">
+            <span>McKesson</span>
+            <span>1:21</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal content area -->
+<div id="modal" class="fixed inset-0 z-50 flex items-center justify-center px-4 hidden" role="dialog" aria-modal="true" aria-label="Video player">
+  <!-- Backdrop (click this to close) -->
+<div id="backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-xs hidden" aria-hidden="true"></div>
+  <!-- Video wrapper -->
+  <div id="modal-panel" class="relative w-full max-w-5xl bg-black rounded-lg overflow-hidden shadow-2xl">
+    <!-- player goes here dynamically -->
+  </div>
+
+  <!-- Close button -->
+  <button id="close-btn" class="absolute top-6 right-6 z-60 text-white bg-black/40 hover:bg-black/60 rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-white" aria-label="Close video">
+    ✕
+  </button>
+  
+</div>
+
+<!-- A polite SR-only live region (used if you want to announce tab changes) -->
+<div id="tab-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+<script>
+/* ========= Image gallery + modal controller ========= */
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+  const grids = Array.from(document.querySelectorAll('.image-grid'));
+  const ann = document.getElementById('tab-announcer');
+
+  // Modal elements
+  const backdrop = document.getElementById('backdrop');
+  const modal = document.getElementById('modal');
+  const modalPanel = document.getElementById('modal-panel');
+  const closeBtn = document.getElementById('close-btn');
+
+  let lastFocusedTrigger = null;
+
+  /* ---------- Tabs: initialize and behavior ---------- */
+  const activateTab = (category) => {
+    tabs.forEach(btn => {
+      const c = btn.dataset.category;
+      const isActive = c === category;
+      btn.classList.toggle('bg-gray-100', isActive);
+      btn.classList.toggle('ring-2', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      btn.tabIndex = isActive ? 0 : -1;
+    });
+
+    grids.forEach(grid => {
+      const gridCategory = grid.id.replace('-grid','');
+      if (gridCategory === category) {
+        // show with transition -> remove hidden, then set opacity and pointer-events
+        grid.removeAttribute('hidden');
+        // small delay to allow DOM to take effect before adding visible classes
+        requestAnimationFrame(() => {
+          grid.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+          grid.classList.add('opacity-100', 'pointer-events-auto', 'scale-100');
+        });
+      } else {
+        // hide gracefully
+        grid.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100');
+        grid.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+        // after transition, add hidden so offscreen grids don't take tab focus
+        setTimeout(() => grid.setAttribute('hidden',''), 50);
+      }
+    });
+
+    if (ann) {
+      const pretty = category.charAt(0).toUpperCase() + category.slice(1);
+      ann.textContent = `Switched to ${pretty} images`;
+    }
+  };
+
+  // attach tab click handlers
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => activateTab(btn.dataset.category));
+    btn.addEventListener('keydown', (e) => {
+      // simple keyboard navigation: left/right
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        const idx = tabs.indexOf(btn);
+        tabs[(idx + 1) % tabs.length].focus();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const idx = tabs.indexOf(btn);
+        tabs[(idx - 1 + tabs.length) % tabs.length].focus();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        tabs[0].focus();
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        tabs[tabs.length - 1].focus();
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activateTab(btn.dataset.category);
+      }
+    });
+  });
+
+  // initial state: nature
+  activateTab('nature');
+
+  /* ---------- Modal (lightbox) behavior ---------- */
+
+  // Helper: build lite-vimeo element dynamically so we can remove it on close
+  function createLiteVimeo(videoId, thumbUrl) {
+    // create element
+    const el = document.createElement('lite-vimeo');
+    el.setAttribute('videoid', String(videoId));
+    el.className = 'w-full aspect-video block';
+    if (thumbUrl) {
+      el.style.backgroundImage = `url('${thumbUrl}')`;
+      el.style.backgroundSize = 'cover';
+      el.style.backgroundPosition = 'center';
+    }
+    // add a play button slot if the component expects one
+    const play = document.createElement('div');
+    play.className = 'ltv-playbtn';
+    el.appendChild(play);
+    return el;
+  }
+
+  function openModal(triggerEl) {
+    if (!triggerEl) return;
+    lastFocusedTrigger = triggerEl;
+    const vid = triggerEl.dataset.videoid;
+    const thumb = triggerEl.dataset.thumb || '';
+
+    // create player
+    modalPanel.innerHTML = ''; // ensure empty
+    const player = createLiteVimeo(vid, thumb);
+    modalPanel.appendChild(player);
+
+    // show backdrop + modal
+    backdrop.classList.remove('hidden');
+    modal.classList.remove('hidden');
+
+    // small animation
+    requestAnimationFrame(() => {
+      backdrop.classList.remove('opacity-0');
+      backdrop.classList.add('opacity-100');
+      modal.classList.remove('opacity-0');
+      modal.classList.add('opacity-100');
+    });
+
+    // disable body scroll
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+
+    // set focus to close button for accessibility
+    closeBtn.focus();
+
+    // add event listeners
+    document.addEventListener('keydown', onKeyDownModal);
+  }
+
+  function closeModal() {
+    // remove listeners
+    document.removeEventListener('keydown', onKeyDownModal);
+
+    // hide modal/backdrop
+    backdrop.classList.add('hidden');
+    modal.classList.add('hidden');
+
+    // remove player (this stops playback reliably)
+    modalPanel.innerHTML = '';
+
+    // re-enable body scroll
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+
+    // return focus to last trigger
+    if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+      lastFocusedTrigger.focus();
+      lastFocusedTrigger = null;
+    }
+  }
+
+  function onKeyDownModal(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    } else if (e.key === 'Tab') {
+      // basic focus trap: keep focus inside modal (closeBtn and modalPanel)
+      // For more robust focus trapping, use a library or more complete logic.
+      const focusable = [closeBtn, modalPanel];
+      const focusedIdx = focusable.indexOf(document.activeElement);
+      if (e.shiftKey) {
+        if (focusedIdx === 0) {
+          e.preventDefault();
+          focusable[focusable.length - 1].focus();
+        }
+      } else {
+        if (focusedIdx === focusable.length - 1) {
+          e.preventDefault();
+          focusable[0].focus();
+        }
+      }
+    }
+  }
+
+  // Clicking any .video-thumb should open modal
+  document.body.addEventListener('click', (ev) => {
+    const thumb = ev.target.closest('.video-thumb');
+    if (thumb) {
+      openModal(thumb);
+    }
+  });
+
+  // allow keyboard activation of video-thumb (Enter/Space)
+  document.body.addEventListener('keydown', (ev) => {
+    if ((ev.key === 'Enter' || ev.key === ' ') && document.activeElement && document.activeElement.classList.contains('video-thumb')) {
+      ev.preventDefault();
+      openModal(document.activeElement);
+    }
+  });
+
+  // backdrop click closes modal (clicking backdrop only)
+  backdrop.addEventListener('click', (e) => {
+    closeModal();
+  });
+
+  // close button
+  closeBtn.addEventListener('click', closeModal);
+});
+</script>
+

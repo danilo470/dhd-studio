@@ -2,4 +2,200 @@
 layout: 'layouts/base.njk'
 title: 'Homepage'
 ---
+<section class="py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-2">
+          <div class="flex flex-col gap-20 justify-center">
+            <h2 class="text-gray-900 font-manrope text-5xl font-semibold leading-tight max-w-lg">Learn how we help brands grow with <span class="text-accent2 italic">powerful storytelling</span></h2>
+            <!-- Swiper Container -->
+              <div class="swiper testimonial-swiper relative w-full !pb-0.25">
+                  <div class="swiper-wrapper">
+                      <!-- Slide 1 -->
+                      <div class="swiper-slide">
+                          <div class="group relative w-full bg-transparent border border-solid border-gray-200 p-5 sm:py-8 sm:px-6 rounded-xl transition-all duration-500  hover:border-accent2 flex flex-col justify-between">
+                              <div>
+                                  <img class="h-9 w-min mb-4" src="/dhd-images/Amazon_logo.svg.png" alt="">
+                                  <p class="text-prim leading-6 pb-3 sm:pb-8 transition-all duration-500 min-h-[85px] sm:min-h-[105px]">
+                                      "I was amazed with your company! Easy to work with and extremely efficient. The best part was that I was able to give instructions and did not have to "babysit" the crew when they were doing their work. Amazing company!"
+                                  </p>
+                              </div>
+                              <div class="flex items-center justify-between pt-6 border-t border-solid border-gray-200">
+                                  <div class="flex items-center gap-3">
+                                      <img src="https://pagedone.io/asset/uploads/1704349534.png" alt="Emily image" class="w-10 h-10 rounded-full object-cover"/>
+                                      <div class="block">
+                                          <h5 class="text-gray-900 font-medium">Emily Johnson</h5>
+                                          <span class="text-xs text-gray-500 transition-all duration-500 group-hover:text-accent2">Design Lead</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Slide 2 -->
+                      <div class="swiper-slide">
+                          <div class="group relative w-full bg-transparent border border-solid border-gray-200 p-5 sm:py-8 sm:px-6 rounded-xl transition-all duration-500  hover:border-accent2 flex flex-col justify-between">
+                              <div>
+                                  <img class="h-9 w-min mb-4" src="/dhd-images/Amazon_logo.svg.png" alt="">
+                                  <p class="text-prim leading-6 pb-3 sm:pb-8 transition-all duration-500 min-h-[85px] sm:min-h-[105px]">
+                                      "Outstanding service from start to finish! The team was professional, responsive, and delivered exactly what we needed. I couldn't be happier with the results and would definitely recommend them."
+                                  </p>
+                              </div>
+                              <div class="flex items-center justify-between pt-6 border-t border-solid border-gray-200">
+                                  <div class="flex items-center gap-3">
+                                      <img src="https://pagedone.io/asset/uploads/1704349575.png" alt="Michael image" class="w-10 h-10 rounded-full object-cover"/>
+                                      <div class="block">
+                                          <h5 class="text-gray-900 font-medium">Michael Chen</h5>
+                                          <span class="text-xs text-gray-500 transition-all duration-500 group-hover:text-accent2">Product Manager</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Slide 3 -->
+                      <div class="swiper-slide">
+                          <div class="group relative w-full bg-transparent border border-solid border-gray-200 p-5 sm:py-8 sm:px-6 rounded-xl transition-all duration-500  hover:border-accent2 flex flex-col justify-between">
+                              <div>
+                                  <img class="h-9 w-min mb-4" src="/dhd-images/Amazon_logo.svg.png" alt="">
+                                  <p class="text-prim leading-6 pb-3 sm:pb-8 transition-all duration-500 min-h-[85px] sm:min-h-[105px]">
+                                      "Exceptional quality and attention to detail. The team exceeded our expectations and delivered the project ahead of schedule. Their communication throughout the process was excellent."
+                                  </p>
+                              </div>
+                              <div class="flex items-center justify-between pt-6 border-t border-solid border-gray-200">
+                                  <div class="flex items-center gap-3">
+                                      <img src="https://pagedone.io/asset/uploads/1704349514.png" alt="Sarah image" class="w-10 h-10 rounded-full object-cover"/>
+                                      <div class="block">
+                                          <h5 class="text-gray-900 font-medium">Sarah Williams</h5>
+                                          <span class="text-xs text-gray-500 transition-all duration-500 group-hover:text-accent2">Marketing Director</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Navigation buttons -->
+                  <div class="absolute bottom-9 right-6 flex gap-4 z-10">
+                    <div class="!static swiper-button-prev !text-accent2 !w-11 !h-11 !bg-transparent !rounded-full !border !border-accent2 hover:!bg-accent2 hover:!text-white !transition-all !duration-250 after:!text-lg after:!font-bold">
+                      <div class="size-5 z-20">
+                        <svg width="100%" height="100%" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0303 22.7182L9.69354 21.8929C8.9077 19.9671 5.94846 15.5427 0.612341 13.7838C0.244597 13.6626 -0.00283524 13.3179 2.45305e-05 12.9307C0.00288345 12.5435 0.255381 12.2024 0.624876 12.0866C5.7816 10.4709 8.41659 6.29016 9.75199 4.03642L10.2064 3.26953L11.7401 4.17832L11.2858 4.9452C10.1057 6.93686 7.7308 10.7813 3.2711 12.9491C7.91196 15.2325 10.5336 19.2329 11.3442 21.2194L11.681 22.0447L10.0303 22.7182Z" fill="inherit"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M26 13.8042L1.04095 13.8042L1.04095 12.0215L26 12.0215L26 13.8042Z" fill="inherit"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="!static swiper-button-next !text-accent2 !w-11 !h-11 !bg-transparent !rounded-full !border !border-accent2 hover:!bg-accent2 hover:!text-white !transition-all !duration-250 after:!text-lg after:!font-bold rotate-180">
+                      <div class="size-5 z-20">
+                        <svg width="100%" height="100%" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0303 22.7182L9.69354 21.8929C8.9077 19.9671 5.94846 15.5427 0.612341 13.7838C0.244597 13.6626 -0.00283524 13.3179 2.45305e-05 12.9307C0.00288345 12.5435 0.255381 12.2024 0.624876 12.0866C5.7816 10.4709 8.41659 6.29016 9.75199 4.03642L10.2064 3.26953L11.7401 4.17832L11.2858 4.9452C10.1057 6.93686 7.7308 10.7813 3.2711 12.9491C7.91196 15.2325 10.5336 19.2329 11.3442 21.2194L11.681 22.0447L10.0303 22.7182Z" fill="inherit"></path>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M26 13.8042L1.04095 13.8042L1.04095 12.0215L26 12.0215L26 13.8042Z" fill="inherit"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+            <div class="p-8 rounded-r-3xl border border-gray-100 bg-white">
+                <div class="pb-11 flex flex-col gap-5">
+                    <h2 class="text-gray-900 font-manrope text-4xl font-semibold leading-snug">Contact Us</h2>
+                    <p class="text-gray-600 text-lg font-normal">This is your direct line to reach out to us with any questions, concerns, feedback, or inquiries you might have.</p>
+                </div>
+                <form action="" class="flex flex-col gap-10 mb-0">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                        <div class="w-full justify-start items-start gap-1 flex">
+                            <div class="w-full justify-start items-start gap-1.5 flex flex-col">
+                                <div class="justify-start items-center gap-1 inline-flex">
+                                    <span class="text-gray-600 text-base font-medium leading-7">First Name</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                        <path d="M2.55682 6.90909L2.66477 4.51136L0.642045 5.8125L0.0227273 4.73295L2.17045 3.63636L0.0227273 2.53977L0.642045 1.46023L2.66477 2.76136L2.55682 0.363636H3.78977L3.68182 2.76136L5.70455 1.46023L6.32386 2.53977L4.17614 3.63636L6.32386 4.73295L5.70455 5.8125L3.68182 4.51136L3.78977 6.90909H2.55682Z" fill="#EF4444"></path>
+                                    </svg>
+                                </div>
+                                <input type="text" class="w-full py-3 px-5 rounded-lg focus:outline-none border border-gray-200 shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] placeholder-gray-400 text-gray-900 text-lg font-normal" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="w-full justify-start items-start gap-1 flex">
+                            <div class="w-full justify-start items-start gap-1.5 flex flex-col">
+                                <div class="justify-start items-center gap-1 inline-flex">
+                                    <span class="text-gray-600 text-base font-medium leading-7">Last Name</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                        <path d="M2.55682 6.90909L2.66477 4.51136L0.642045 5.8125L0.0227273 4.73295L2.17045 3.63636L0.0227273 2.53977L0.642045 1.46023L2.66477 2.76136L2.55682 0.363636H3.78977L3.68182 2.76136L5.70455 1.46023L6.32386 2.53977L4.17614 3.63636L6.32386 4.73295L5.70455 5.8125L3.68182 4.51136L3.78977 6.90909H2.55682Z" fill="#EF4444"></path>
+                                    </svg>
+                                </div>
+                                <input type="text" class="w-full py-3 px-5 rounded-lg focus:outline-none border border-gray-200 shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] placeholder-gray-400 text-gray-900 text-lg font-normal" placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full justify-start items-start gap-1 flex">
+                        <div class="w-full justify-start items-start gap-1.5 flex flex-col">
+                            <div class="justify-start items-center gap-1 inline-flex">
+                                <span class="text-gray-600 text-base font-medium leading-7">Email</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                    <path d="M2.55682 6.90909L2.66477 4.51136L0.642045 5.8125L0.0227273 4.73295L2.17045 3.63636L0.0227273 2.53977L0.642045 1.46023L2.66477 2.76136L2.55682 0.363636H3.78977L3.68182 2.76136L5.70455 1.46023L6.32386 2.53977L4.17614 3.63636L6.32386 4.73295L5.70455 5.8125L3.68182 4.51136L3.78977 6.90909H2.55682Z" fill="#EF4444"></path>
+                                </svg>
+                            </div>
+                            <input type="text" class="w-full py-3 px-5 rounded-lg focus:outline-none border border-gray-200 shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] placeholder-gray-400 text-gray-900 text-lg font-normal" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="w-full justify-start items-start gap-1 flex">
+                        <div class="w-full justify-start items-start gap-1.5 flex flex-col">
+                            <div class="justify-start items-center gap-1 inline-flex">
+                                <span class="text-gray-600 text-base font-medium leading-7">Description</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                    <path d="M2.55682 6.90909L2.66477 4.51136L0.642045 5.8125L0.0227273 4.73295L2.17045 3.63636L0.0227273 2.53977L0.642045 1.46023L2.66477 2.76136L2.55682 0.363636H3.78977L3.68182 2.76136L5.70455 1.46023L6.32386 2.53977L4.17614 3.63636L6.32386 4.73295L5.70455 5.8125L3.68182 4.51136L3.78977 6.90909H2.55682Z" fill="#EF4444"></path>
+                                </svg>
+                            </div>
+                            <input type="text" class="w-full py-3 px-5 rounded-lg focus:outline-none border border-gray-200 shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] placeholder-gray-400 text-gray-900 text-lg font-normal" placeholder="Message">
+                        </div>
+                    </div>
+                    <button class="px-5 py-2.5 rounded-xl bg-accent2 hover:bg-accent2 transition-all duration-700 ease-in-out shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)]">
+                        <span class="px-2 text-white text-base font-semibold leading-7">Submit</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
+<div class="absolute bottom-0 top-0 left-0 right-0 -z-50">
+  <img class="size-full object-cover" src="https://products.ls.graphics/mesh-gradients/images/78.-Night-sky.jpg" alt="">
+  <span class="bg-black/0 absolute inset-0"></span>
+</div>
+
+ <style>
+    /* Hide default Swiper navigation buttons */
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        display: none;
+    }
+</style>
+<script defer>
+    // Initialize Swiper
+    const swiper = new Swiper('.testimonial-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+          autoHeight: true, // 👈 makes the swiper wrapper resize to active slide height
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'slide',
+        speed: 400,
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+        }
+    });
+</script>
+    

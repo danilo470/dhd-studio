@@ -6,20 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Swiper CSS -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   {{ head | safe }}
 </head>
-<body class="bg-blk text-dark relative hero__layer">
-  {# {% include 'partials/_header.html' %} #}
+<body class="bg-sec text-dark relative hero__layer">
+  {% include 'partials/_header.html' %}
   <main>
     {{ content | safe }}
   </main>
   {% include 'partials/_footer.html' %}
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <script>
     if (window.netlifyIdentity) {
@@ -32,6 +36,13 @@
       });
     }
   </script>
+   <!-- Swiper JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Your custom script (must come AFTER Swiper) -->
   <script defer src="/script.js"></script>
+
+  <!-- Light Vimeo -->
+  <script defer type="module" src="https://cdn.jsdelivr.net/npm/lite-vimeo-embed/+esm"></script>
 </body>
 </html>

@@ -29,6 +29,40 @@
 --color-brd-hvr: #d4c4b8aa;
 --color-wht: hsl(16 18% 35% / 1);
 --color-dark: #2a2a2a; /*used for text*/
+
+
+--color-prim: #001122;
+--color-sec: #F0F7F4;
+--color-accent: #99E1D9;
+--color-accent2: #4f39f6;
 }
 .hero-gradient {
   background: linear-gradient(to bottom,rgba(0, 0, 0, 0.6) 0%, rgba(0,0,0,0.0) 20%, rgba(0,0,0,0.0) 55%, rgba(0, 0, 0, 0.5) 78%);}
+
+
+.image-grid.active {
+  display: grid;
+  opacity: 1;
+}
+.crazy-shadow {
+  box-shadow:
+    0 5px 20px color-mix(in srgb, var(--color-accent) 20%, transparent),
+    0 10px 50px color-mix(in srgb, var(--color-accent) 20%, transparent),
+    0 30px 60px color-mix(in srgb, var(--color-accent) 20%, transparent),
+    0 0 20px color-mix(in srgb, var(--color-accent) 50%, transparent),
+    0 0 50px color-mix(in srgb, var(--color-accent) 50%, transparent);
+}
+.crazy-shadow:hover{
+  box-shadow: 0 0 50px var(--color-accent);
+}
+
+/* AAAAAAAAAAAAAAAAAAAAAAA */
+.bg{
+  background-color: #001122;
+  background: #f3faff;
+  background: hsl(111, 83%, 53%);
+}
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
+.scale-101 {
+  transform: scale(1.01);
+}
